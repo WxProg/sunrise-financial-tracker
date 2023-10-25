@@ -1,14 +1,22 @@
+import React, { useMemo, useState } from "react";
 import { MainLayout } from "./styles/Layouts";
-// import { GlobalStyle } from "./styles/GlobalStyle";
 import styled from "styled-components";
 import bg from "./assets/img/bg1.jpg";
 import Float from "./Components/Float/Float";
+import Navigation from "./Components/Navigation/Navigation";
 
 function App() {
+  const [active, setActive] = useState(1);
+  const floatMemo = useMemo(() => {
+    return <Float />;
+  }, []);
+
   return (
     <AppStyling bg={bg} className="App">
-      <Float />
-      <MainLayout></MainLayout>
+      {floatMemo}
+      <MainLayout>
+        <Navigation active={active} setActive={setActive} />
+      </MainLayout>
     </AppStyling>
   );
 }

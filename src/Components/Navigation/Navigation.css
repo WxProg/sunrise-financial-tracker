@@ -1,0 +1,10 @@
+.menu-item {
+  display: flex;
+  align-items: center; /* This will vertically align the icon and the title */
+  gap: 8px; /* This provides space between the icon and the title */
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+}

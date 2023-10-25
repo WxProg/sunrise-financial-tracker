@@ -26,7 +26,7 @@ function Float() {
     margin-left: -37vh;
     margin-top: -37vh;
     background: linear-gradient(180deg, #f56692 0%, #f2994a 100%);
-    filter: blur(402px);
+    filter: blur(150px);
     animation: ${moveFloat} 18s alternate linear infinite;
   `;
 
